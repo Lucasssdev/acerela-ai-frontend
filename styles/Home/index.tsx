@@ -21,6 +21,9 @@ export const Header = styled.header`
     justify-content: space-between;
     padding: 2rem 0 1.5rem 0;
     transition: box-shadow 0.2s;
+    @media screen and (max-width: 500px) {
+        padding: 1rem 0 0.5rem 0;
+    }
 `
 export const BlueSection = styled.div`
     width: 100%;
@@ -35,10 +38,14 @@ export const Logo = styled.div`
     display: flex;
     align-items: center;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.25rem;
     color: #2563eb;
     margin-left: 3rem;
     letter-spacing: -2px;
+    cursor: pointer;
+    @media screen and (max-width: 500px) {
+        margin-left: 1rem;
+    }
 `
 
 export const Nav = styled.nav`
@@ -66,34 +73,40 @@ export const Nav = styled.nav`
             color: #2563eb;
         }
     }
+    @media screen and (max-width: 900px) {
+        display: none;
+    }
 `
 
 export const Main = styled.main`
-    display: grid;
+    display: flex;
+    width: 100%;
+    border: solid 1px red;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
     padding: 7rem 2rem 2rem 7rem; // aumente conforme altura real do header
     //flex-wrap: wrap;
     background: #e7f0ff;
+    @media screen and (max-width: 900px) {
+        padding-left: 2rem;
+    }
 `
 export const Icon = styled(FontAwesomeIcon)<{ color?: string; iconSize?: string }>`
     color: ${({ color }) => color || 'var(--text-primary)'};
     font-size: ${({ iconSize }) => iconSize || '1rem'};
 `
 export const Info = styled.div`
-    flex: 1;
+    //  flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    padding: 0 1rem;
     width: 100%;
-    min-width: 300px;
-    max-width: 500px;
 `
 export const RobotBox = styled.div`
     flex: 1;
-    min-width: 280px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,6 +115,18 @@ export const RobotBox = styled.div`
         width: 300px;
         height: 300px;
         border-radius: 50%;
+    }
+    @media screen and (max-width: 900px) {
+        .robot {
+            width: 150px;
+            height: 150px;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .robot {
+            width: 150px;
+            height: 150px;
+        }
     }
     // background-color: red;
 `
@@ -112,6 +137,9 @@ export const Title = styled.h1`
     color: #0f172a;
     margin-bottom: 1rem;
     line-height: 110%;
+    @media screen and (max-width: 900px) {
+        font-size: 1.8rem;
+    }
 `
 
 export const Subtitle = styled.p`
@@ -119,6 +147,9 @@ export const Subtitle = styled.p`
     font-size: 1.25rem;
     margin-bottom: 2rem;
     font-weight: 500;
+    @media screen and (max-width: 900px) {
+        font-size: 1rem;
+    }
 `
 
 export const Button = styled.a`
@@ -133,6 +164,7 @@ export const Button = styled.a`
     transition: background 0.2s;
     text-decoration: none;
     margin-top: 1rem;
+    white-space: nowrap;
     &:hover {
         background: #1e50b5;
     }

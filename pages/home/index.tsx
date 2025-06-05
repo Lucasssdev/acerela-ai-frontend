@@ -19,8 +19,14 @@ export default function Home() {
             </S.Header>
             <S.Main id="main">
                 <S.Info>
-                    <S.Title>Serviços de Agentes Inteligentes</S.Title>
-                    <S.Subtitle>Automatize seu negócio com soluções inteligentes de IA e acelere seus resultados!</S.Subtitle>
+                    <S.Title>
+                        Serviços de <br />
+                        Agentes <br /> Inteligentes
+                    </S.Title>
+                    <S.Subtitle>
+                        Automatize seu negócio com <br />
+                        soluções inteligentes de IA <br />e acelere seus resultados!
+                    </S.Subtitle>
                     <S.Button href="#">Começar agora</S.Button>
                 </S.Info>
                 <S.RobotBox>
