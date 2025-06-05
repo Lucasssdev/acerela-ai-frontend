@@ -38,13 +38,14 @@ export const Logo = styled.div`
     display: flex;
     align-items: center;
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 2rem;
     color: #2563eb;
     margin-left: 3rem;
     letter-spacing: -2px;
     cursor: pointer;
     @media screen and (max-width: 500px) {
         margin-left: 1rem;
+        font-size: 1.3rem;
     }
 `
 
@@ -79,17 +80,17 @@ export const Nav = styled.nav`
 `
 
 export const Main = styled.main`
-    display: flex;
+    display: grid;
     width: 100%;
-    border: solid 1px red;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
     padding: 7rem 2rem 2rem 7rem; // aumente conforme altura real do header
     //flex-wrap: wrap;
     background: #e7f0ff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     @media screen and (max-width: 900px) {
-        padding-left: 2rem;
+        padding: 4rem 2rem 2rem 2rem;
     }
 `
 export const Icon = styled(FontAwesomeIcon)<{ color?: string; iconSize?: string }>`
