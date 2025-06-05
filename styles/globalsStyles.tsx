@@ -70,11 +70,15 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeInterface }>`
     box-sizing: border-box;
     padding: 0;
     scrollbar-color: transparent;
+      ::-webkit-scrollbar {
+        width: 5px;
+        border-radius: 5px;
+    }
     ::-webkit-scrollbar{
         background-color: transparent;
     }
     ::-webkit-scrollbar-thumb{
-        background-color: var(--bg-level-max);
+        background-color: rgba(0,0,0,0.1);
     }
   }
   p,span,div,button,body,li,td,th,ul {
